@@ -1,6 +1,6 @@
 {
-  "name": "agent-launch",
-  "version": "0.1.0",
+  "name": "@p-vbordei/agent-launch",
+  "version": "0.1.1",
   "description": "Draft platform-native release announcements (HN, Reddit, X, Mastodon, LinkedIn) from your repo's CHANGELOG + README",
   "author": "Vlad Bordei <bordeivlad@gmail.com>",
   "homepage": "https://github.com/p-vbordei/agent-launch",

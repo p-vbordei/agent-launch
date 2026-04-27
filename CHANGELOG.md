@@ -4,6 +4,11 @@ All notable changes to agent-launch will be documented in this file. Format foll
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-04-27
+
+### Changed
+- npm package name set to `@p-vbordei/agent-launch` (org just created on npm). Install: `npm i -g @p-vbordei/agent-launch`. Binary name (`agent-launch`) is unchanged. First public npm publish is this version (0.1.0 was tagged in git but never reached npm).
+
 ## [0.1.0] - 2026-04-27
 
 ### Added
