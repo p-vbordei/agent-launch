@@ -1,6 +1,6 @@
 {
   "name": "agent-launch",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Draft platform-native release announcements (HN, Reddit, X, Mastodon, LinkedIn) from your repo's CHANGELOG + README",
   "type": "module",
   "bin": { "agent-launch": "./src/index.ts" },

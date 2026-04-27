@@ -2,16 +2,27 @@
 
 > Draft platform-native release announcements (HN, Reddit, X, Mastodon, LinkedIn) from your repo's CHANGELOG + README + recent commits. Single Bun binary. **v0.1: drafts only — you post.**
 
-**Status:** v0.0.0 — under construction. See [SCOPE.md](./SCOPE.md), [SPEC.md](./SPEC.md), [docs/superpowers/specs/](./docs/superpowers/specs/).
+**Status:** v0.1.0 — see [CHANGELOG.md](./CHANGELOG.md), [SPEC.md](./SPEC.md), [SCOPE.md](./SCOPE.md).
 
 ## What it does
 
 ```bash
 bun install
-$EDITOR launch.yaml
-agent-launch draft v0.2.0
-# →  launches/v0.2.0/hn.md, reddit-programming.md, reddit-typescript.md,
-#    x.md, mastodon.md, linkedin.md
+bun run examples/demo.ts                       # gather context, no API key needed
+
+# In your own repo:
+cp launch.yaml.example launch.yaml && $EDITOR launch.yaml
+agent-launch context 0.2.0                     # debug: print the gathered context
+ANTHROPIC_API_KEY=... agent-launch draft 0.2.0 # → launches/v0.2.0/{hn,reddit-*,x,mastodon,linkedin}.md
+agent-launch draft 0.2.0 --platforms hn,x      # only specific platforms
+agent-launch draft 0.2.0 --out drafts/         # custom output dir (must be inside cwd)
+```
+
+To produce a single binary:
+
+```bash
+bun build --compile --outfile agent-launch src/index.ts
+ANTHROPIC_API_KEY=... ./agent-launch draft 0.2.0
 ```
 
 Each draft is platform-native: HN's "Show HN" pattern, Reddit's subreddit etiquette, X's threaded format, Mastodon's longer-form toot, LinkedIn's slightly-more-business voice. No "revolutionary" or "game-changing" marketing slop — anti-examples are baked into the prompts.
