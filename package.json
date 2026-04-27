@@ -1,0 +1,24 @@
+{
+  "name": "agent-launch",
+  "version": "0.0.0",
+  "description": "Draft platform-native release announcements (HN, Reddit, X, Mastodon, LinkedIn) from your repo's CHANGELOG + README",
+  "type": "module",
+  "bin": { "agent-launch": "./src/index.ts" },
+  "scripts": {
+    "test": "bun test",
+    "build": "bun build --compile --outfile agent-launch src/index.ts",
+    "lint": "biome check src tests"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.40.0",
+    "js-yaml": "^4.1.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.0",
+    "@types/js-yaml": "^4.0.9",
+    "bun-types": "latest"
+  },
+  "license": "Apache-2.0",
+  "trustedDependencies": ["@biomejs/biome"]
+}

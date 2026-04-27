@@ -1,0 +1,10 @@
+node_modules/
+agent-launch
+agent-launch.exe
+*.log
+.env
+.env.*
+!.env.example
+.DS_Store
+launches/
+!examples/launches/
